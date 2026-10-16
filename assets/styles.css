@@ -1,0 +1,72 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 24px 16px; background: #fff; color: #111; font-family: ui-monospace, monospace; }
+main { max-width: 560px; margin: auto; }
+#top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+#title { margin: 0; font-size: 3rem; }
+#score { font-size: 3rem; }
+#board { width: 100%; aspect-ratio: 1; border: 5px solid black; padding: 1px; }
+#board > div { height: 5%; display: flex; }
+#board > div > div { width: 5%; height: 100%; }
+#ui { min-height: 110px; text-align: center; }
+button { background: white; color: black; border: 3px solid black; padding: 10px; font: inherit; cursor: pointer; }
+button:active { background: black; color: white; }
+button:focus-visible { outline: 3px solid #2775c9; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .earthquake, .negaStyle { animation: none !important; } }
+.snake {
+	background-color: black;
+}
+.tile {
+	background-color: white;
+}
+#ui {
+	padding: 10px;
+	margin: 0 auto;
+	text-align: center;
+	width: 40vw;
+}
+.normie {
+	background-color: #FA7921;
+}
+.quake {
+	background-color: #E55934;
+}
+.nega {
+	background-color: #9BC53D;
+}
+.negaStyle {
+	background-color: red;
+	animation: trip 1s infinite;
+}
+@keyframes trip {
+	0% { background-color: #9400D3;  }
+	20% { background-color: #0000FF; }
+	40% { background-color: #00FF00; }
+	60% { background-color: #FFFF00; }
+	80% { background-color: #FF7F00; }
+	100% { background-color: #FF0000; }
+}
+.turbo {
+	background-color: #FDE74C;
+}
+.bonus {
+	background-color: #5BC0EB;
+}
+.bonus-points {
+	color: red;
+	font-weight: bold;
+}
+.earthquake {
+	animation: quake .5s infinite;
+}
+@keyframes quake {
+	0% { transform: translateX(10px) translateY(10px); }
+	10% { transform: translateX(-10px) translateY(-10px); }
+	20% { transform: translateX(10px) translateY(10px); }
+	30% { transform: translateX(-10px) translateY(-10px); }
+	40% { transform: translateX(10px) translateY(10px); }
+	50% { transform: translateX(-10px) translateY(-10px); }
+	60% { transform: translateX(10px) translateY(10px); }
+	70% { transform: translateX(-10px) translateY(-10px); }
+	80% { transform: translateX(10px) translateY(10px); }
+	90% { transform: translateX(-10px) translateY(-10px); }
+}
